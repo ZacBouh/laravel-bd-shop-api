@@ -52,4 +52,15 @@ class AuthController extends Controller
             'message' => 'Invalid credentials'
         ], status:401);
     }
+
+    public function logout(Request $request) {
+        $user = Auth::user();
+        Auth::guard('web')->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return response()->json([
+            'message' => 'User Logged out',
+            'user' => $user
+        ], status: 200);
+    }
 }

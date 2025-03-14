@@ -1,0 +1,12 @@
+<h1>Login</h1>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+  <label for="email">Email</label>
+  <input id="email" type="email" formControlName="email" >
+  <label for="password">Password</label>
+  <input id="password" type="password" formControlName="password" >
+  <button type="submit" [disabled]="!loginForm.valid || auth.loading()">Submit</button>
+  <p *ngIf="auth.loading()" >Loading</p>
+  <p *ngIf="auth.user()" >user : {{ auth.user()?.updated_at?.toLocaleDateString() }}</p>
+  <p *ngIf="auth.error()" >Error : {{ auth.error() }}</p>
+  <p *ngIf="auth.registered()" >You can now login</p>
+</form>
