@@ -15,7 +15,7 @@ class Image extends Model
 
     public function books(): MorphToMany
     {
-        return $this->morphedByMany(Book::class,'imageable');
+        return $this->morphedByMany(Book::class,'imageable')->withTimestamps();
     }
 
     public function getUrlAttribute()

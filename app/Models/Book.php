@@ -24,6 +24,6 @@ class Book extends Model
 
    public function images(): MorphToMany
    {
-    return $this->morphToMany(Image::class, 'imageable');
+    return $this->morphToMany(Image::class, 'imageable')->withTimestamps();
    }
 }

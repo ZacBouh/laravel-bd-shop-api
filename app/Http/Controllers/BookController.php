@@ -30,7 +30,7 @@ class BookController extends Controller
                 $imageList[] = [
                     "path" => $path,
                     "name" => $image->getClientOriginalName(),
-                    "alt" => $image->getClientOriginalName()
+                    "alt" => $image->getClientOriginalName(),
                 ];
             }
             $book->images()->createMany($imageList);
