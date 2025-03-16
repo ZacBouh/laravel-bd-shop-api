@@ -1,0 +1,6 @@
+<a (click)="toggleDropDown()" >{{menuName}}</a>
+<div *ngIf="isOpen" >
+  <ul>
+    <li *ngFor="let option of options" (click)="selectOption(option)" >{{option.label}}</li>
+  </ul>
+</div>

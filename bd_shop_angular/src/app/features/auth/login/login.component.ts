@@ -1,13 +1,13 @@
 import { Component,  inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthService } from '../../../core/auth/auth.service';
-import { NgIf, JsonPipe } from '@angular/common';
+import { NgIf} from '@angular/common';
 
 const v = Validators;
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule, NgIf, JsonPipe],
+  imports: [ReactiveFormsModule, NgIf],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })

@@ -5,6 +5,7 @@ import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/
 import { routes } from './app.routes';
 import { xsrfInterceptor } from './core/auth/interceptors/xsrf.interceptor';
 import { AuthService } from './core/auth/auth.service';
+import { BookService } from './features/collection/services/book.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,6 +15,7 @@ export const appConfig: ApplicationConfig = {
       withFetch(),
       withInterceptors([xsrfInterceptor])
     ),
-    AuthService
+    AuthService,
+    BookService
   ]
 };

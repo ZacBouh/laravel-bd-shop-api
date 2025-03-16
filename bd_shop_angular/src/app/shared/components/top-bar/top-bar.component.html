@@ -1,6 +1,6 @@
 <div>
   <a routerLink="/login">Login</a>
   <a routerLink="/register">Register</a>
-  <a routerLink="/User">User</a>
   <a (click)="logout(); $event.preventDefault()" *ngIf="auth.user()" href="#">Logout</a>
+  <app-drop-down-menu menuName="Admin" (selectionChange)="handleSelectedMenu($event)" [options]="adminMenu" ></app-drop-down-menu>
 </div>
