@@ -32,7 +32,6 @@ export class TopBarComponent {
   }
 
   handleSelectedMenu(option : DropDownOption<string>){
-    console.log('event caught from the top bar : ' + option.value)
     this.router.navigate([option.value])
   }
 }

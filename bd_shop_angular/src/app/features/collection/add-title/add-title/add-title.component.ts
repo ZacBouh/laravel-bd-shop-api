@@ -24,10 +24,12 @@ export class AddTitleComponent {
     publisher: ['', [v.required]],
     releaseDate: ['', [v.required]],
     description: [''],
+    language: ['', [v.required]],
+    style: [''],
+    collection: ['']
   })
 
   onFilesSelected(event: Event){
-    console.log('called')
     const input = event.target as HTMLInputElement
     if(input.files && input.files.length > 0){
       this.selectedFiles = [...this.selectedFiles, ...Array.from(input.files)]

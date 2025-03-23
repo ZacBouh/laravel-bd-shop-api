@@ -36,7 +36,6 @@ export class DropDownMenuComponent <T = string> {
   }
 
   selectOption(option : DropDownOption<T>){
-    console.log(option)
     this.selectionChange.emit(option)
     this.isOpen = false;
   }
