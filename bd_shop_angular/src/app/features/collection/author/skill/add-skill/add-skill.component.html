@@ -1,0 +1,6 @@
+<h1>Add Skill</h1>
+<form [formGroup]="addSkillForm" (ngSubmit)="submit()" >
+  <label for="name">Skill name</label>
+  <input type="text" id="name" formControlName="name" >
+  <button type="submit">Add</button>
+</form>

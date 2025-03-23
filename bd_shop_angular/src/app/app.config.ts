@@ -6,6 +6,7 @@ import { routes } from './app.routes';
 import { xsrfInterceptor } from './core/auth/interceptors/xsrf.interceptor';
 import { AuthService } from './core/auth/auth.service';
 import { BookService } from './features/collection/services/book.service';
+import { SkillService } from './features/collection/services/skill.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -16,6 +17,7 @@ export const appConfig: ApplicationConfig = {
       withInterceptors([xsrfInterceptor])
     ),
     AuthService,
-    BookService
+    BookService,
+    SkillService
   ]
 };

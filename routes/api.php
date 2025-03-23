@@ -22,6 +22,6 @@ Route::post('/book/create', [BookController::class, 'store'])
     ->middleware('auth:sanctum')
     ->name('book.create');
 
-Route::post('/skill/create', [SkillController::class])
+Route::post('/skill/create', [SkillController::class, 'store'])
     ->middleware('auth:sanctum')
     ->name('skill.create');
