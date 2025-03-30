@@ -1,0 +1,21 @@
+<h1>Add Author</h1>
+<form [formGroup]="addAuthorForm" (submit)="submit()" >
+  <label for="firstName">First Name</label>
+  <input type="text" id="firstName" formControlName="firstName" >
+  <label for="lastName">Last Name</label>
+  <input type="text" id="lastName" formControlName="lastName" >
+  <label for="dateOfBirth">Date of birth</label>
+  <input type="date" id="dateOfBirth" formControlName="dateOfBirth" >
+  <label for="dateOfDeath">Date of death</label>
+  <input type="date" id="dateOfDeath" formControlName="dateOfDeath" >
+  <label for="description">Description</label>
+  <textarea id="description" formControlName="description" ></textarea>
+  <button type="submit" >Save</button>
+</form>
+<div>
+  <ul>
+    <li *ngFor="let author of authors()" >
+      {{author.firstName}} {{author.lastName}} <button (click)="deleteAuthor(author.id)" >❌</button>
+    </li>
+  </ul>
+</div>

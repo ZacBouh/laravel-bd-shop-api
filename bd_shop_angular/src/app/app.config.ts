@@ -7,6 +7,7 @@ import { xsrfInterceptor } from './core/auth/interceptors/xsrf.interceptor';
 import { AuthService } from './core/auth/auth.service';
 import { BookService } from './features/collection/services/book.service';
 import { SkillService } from './features/collection/services/skill.service';
+import { AuthorService } from './features/collection/services/author.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -18,6 +19,7 @@ export const appConfig: ApplicationConfig = {
     ),
     AuthService,
     BookService,
-    SkillService
+    SkillService,
+    AuthorService
   ]
 };

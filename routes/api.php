@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\SkillController;
 
@@ -28,4 +29,17 @@ Route::post('/skill/create', [SkillController::class, 'store'])
 Route::get('/skill', [SkillController::class, 'getSkill'])
     ->middleware('auth:sanctum')
     ->name('skill.get');
+
+Route::post('/author/create', [AuthorController::class, 'store'])
+    ->middleware('auth:sanctum')
+    ->name('author.create');
+
+Route::post('/author/{author}', [AuthorController::class, 'destroy'])
+    ->middleware('auth:sanctum')
+    ->name('author.destroy');
+
+Route::get('/author', [AuthorController::class, 'getAuthors'])
+    ->middleware('auth:sanctum')
+    ->name('author.get');
+
 

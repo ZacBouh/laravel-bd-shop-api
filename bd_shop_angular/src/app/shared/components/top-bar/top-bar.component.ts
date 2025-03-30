@@ -18,6 +18,7 @@ export class TopBarComponent {
   adminMenu : DropDownOption<string>[] = [
     {label: 'Add Title', value: '/collection/add'},
     {label: 'Add Skill', value: '/skill/add'},
+    {label: 'Add Author', value: '/author/add'},
     {label: 'Messages', value: '/messages'},
   ]
 
