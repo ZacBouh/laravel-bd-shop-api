@@ -1,6 +1,17 @@
 <h1>Add Skill</h1>
-<form [formGroup]="addSkillForm" (ngSubmit)="submit()" >
-  <label for="name">Skill name</label>
-  <input type="text" id="name" formControlName="name" >
-  <button type="submit">Add</button>
-</form>
+<div>
+  <div>
+    <form [formGroup]="addSkillForm" (ngSubmit)="submit()" >
+      <label for="name">Skill name</label>
+      <input type="text" id="name" formControlName="name" >
+      <button type="submit">Add</button>
+    </form>
+  </div>
+  <div>
+    <ul>
+      <li *ngFor="let skill of skills()" >
+        {{skill.name}}
+      </li>
+    </ul>
+  </div>
+</div>

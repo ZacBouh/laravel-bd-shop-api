@@ -21,4 +21,14 @@ class SkillController extends Controller
             'skill' => $skill
         ]);
     }
+
+    public function getSkill()
+    {
+        $skills = Skill::all();
+
+        return response()->json([
+            'message' => 'Successfully retrieved skills',
+            'skills' => $skills
+        ]);
+    }
 }

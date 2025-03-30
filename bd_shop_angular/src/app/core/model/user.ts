@@ -1,5 +1,5 @@
 export class User {
-  id?: number
+  id?: string
   name: string
   email: string
   created_at?: Date;
@@ -8,10 +8,10 @@ export class User {
   constructor(user :{
     name: string,
     email:string,
-    id?: number,
+    id?: string,
     created_at?: string | Date,
-    updated_at?: string | Date}
-  ){
+    updated_at?: string | Date
+  }){
     this.name = user.name
     this.email = user.email
     this.id = user.id ?? undefined
