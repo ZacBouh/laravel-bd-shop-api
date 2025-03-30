@@ -43,4 +43,22 @@ export class SkillService {
       }
     })
   }
+
+  deleteSkill(skillId : any){
+    const argType = typeof skillId
+    if (!['string', 'number'].some(type => type == argType)){
+      throw Error(`${argType} is not a valid Skill id`)
+    }
+    this.http.post(`${this.auth.host}/api/skill/${skillId}`, null,{withCredentials: true})
+    .subscribe({
+      next: response => {
+        console.log(response)
+        this.getSkills()
+      },
+      error: error => {
+        console.log('Failed to remove Skill'),
+        console.log(error)
+      }
+    })
+  }
 }

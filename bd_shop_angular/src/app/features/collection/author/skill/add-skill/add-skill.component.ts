@@ -29,4 +29,8 @@ export class AddSkillComponent {
     console.log(this.addSkillForm.value)
     this.skillService.store(this.addSkillForm.getRawValue())
   }
+
+  deleteSkill(skillId : any){
+    this.skillService.deleteSkill(skillId)
+  }
 }
