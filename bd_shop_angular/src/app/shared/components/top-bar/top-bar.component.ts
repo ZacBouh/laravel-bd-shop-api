@@ -6,7 +6,7 @@ import { DropDownMenuComponent, DropDownOption } from '../drop-down-menu/drop-do
 
 @Component({
   selector: 'app-top-bar',
-  imports: [RouterLink, NgIf, DropDownMenuComponent],
+  imports: [RouterLink, DropDownMenuComponent],
   templateUrl: './top-bar.component.html',
   styleUrl: './top-bar.component.css'
 })

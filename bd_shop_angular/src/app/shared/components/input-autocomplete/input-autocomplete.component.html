@@ -1,0 +1,12 @@
+<div>
+  <input type="text" placeholder="Type in" [value]="value()" (input)="debouncedHandled($event)" (focus)="setFocus(true)" (change)="setFocus(false)"  >
+</div>
+@if(focused){
+<div>
+  @for(option of options; track option.value){
+    <div>
+      <a href="#">{{option.label}}</a>
+    </div>
+  }
+</div>
+}

@@ -10,8 +10,13 @@
   <input type="date" id="dateOfDeath" formControlName="dateOfDeath" >
   <label for="description">Description</label>
   <textarea id="description" formControlName="description" ></textarea>
+  <label for="skill">Skill</label>
+  <app-drop-down-menu menuName = 'Add a skill' (selectionChange)="handleSkill($event)" [options]="skillOptions" ></app-drop-down-menu>
   <button type="submit" >Save</button>
 </form>
+<div>
+  <app-input-autocomplete></app-input-autocomplete>
+</div>
 <div>
   <ul>
     <li *ngFor="let author of authors()" >
